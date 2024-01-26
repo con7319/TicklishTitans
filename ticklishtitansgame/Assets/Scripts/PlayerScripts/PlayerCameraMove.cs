@@ -5,8 +5,6 @@ using UnityEngine;
 public class PlayerCameraMove : MonoBehaviour
 {
     public Transform player;
-
-    //private float xRotation = 0f;
     private float turnSpeed = 100f;
     private Vector3 offset;
 
@@ -28,7 +26,7 @@ public class PlayerCameraMove : MonoBehaviour
 
         offset = Quaternion.AngleAxis(mouseX * turnSpeed, Vector3.up) * offset;
         transform.position = player.position + offset;
-        transform.LookAt(player.position);
+        transform.LookAt(player.position, Vector3.up);
 
         player.rotation = transform.rotation;
     }
