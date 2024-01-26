@@ -7,7 +7,7 @@ public class PlayerCameraMove : MonoBehaviour
     public Transform player;
 
     //private float xRotation = 0f;
-    private float turnSpeed = 40f;
+    private float turnSpeed = 100f;
     private Vector3 offset;
 
     private void Start()
