@@ -30,14 +30,13 @@ public class RaveMode : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        bool controlPressed = Input.GetKey(KeyCode.LeftControl);
         bool ePressed = Input.GetKey(KeyCode.E);
 
-        if (!raveMode && controlPressed && ePressed)
+        if (!raveMode && ePressed)
         {
             StartRaveMode();
         }
-        else if (raveMode && controlPressed && ePressed)
+        else if (raveMode && ePressed)
         {
             StopRaveMode();
         }
