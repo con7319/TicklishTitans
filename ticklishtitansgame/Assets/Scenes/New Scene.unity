@@ -229,6 +229,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &392062928 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4314424419994499039, guid: 902dffce978795d46a6cf2816d3c5f6b, type: 3}
+  m_PrefabInstance: {fileID: 721739371}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1ccdc8cb249d6043969b8322544258a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &560990054 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1852518073322526631, guid: e1ba717e13d47c4468d91d96124ee544, type: 3}
@@ -419,9 +430,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3866213587466925425, guid: 2346ada1380dd584b8eff95aec72d090, type: 3}
+      propertyPath: meterFill
+      value: 
+      objectReference: {fileID: 392062928}
+    - target: {fileID: 4054035636222665281, guid: 2346ada1380dd584b8eff95aec72d090, type: 3}
+      propertyPath: lookAtCamera
+      value: 
+      objectReference: {fileID: 1531789005}
     - target: {fileID: 4538282398095392936, guid: 2346ada1380dd584b8eff95aec72d090, type: 3}
       propertyPath: m_Name
       value: Enemy (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4707599728326193859, guid: 2346ada1380dd584b8eff95aec72d090, type: 3}
+      propertyPath: m_Name
+      value: ETicklePoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 5787297739875456920, guid: 2346ada1380dd584b8eff95aec72d090, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1438364278}
+    - target: {fileID: 5787297739875456920, guid: 2346ada1380dd584b8eff95aec72d090, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 560990054}
+    - target: {fileID: 5787297739875456920, guid: 2346ada1380dd584b8eff95aec72d090, type: 3}
+      propertyPath: tickleAreaScript
+      value: 
+      objectReference: {fileID: 1700606900}
+    - target: {fileID: 7875258283688739398, guid: 2346ada1380dd584b8eff95aec72d090, type: 3}
+      propertyPath: m_Name
+      value: EHumorMeter
       objectReference: {fileID: 0}
     - target: {fileID: 8462051317215128117, guid: 2346ada1380dd584b8eff95aec72d090, type: 3}
       propertyPath: m_AnchorMax.y
@@ -574,6 +613,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &1190996923 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3027984417429909908, guid: 2346ada1380dd584b8eff95aec72d090, type: 3}
+  m_PrefabInstance: {fileID: 885871625}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1ccdc8cb249d6043969b8322544258a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1214792252
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -625,7 +675,7 @@ PrefabInstance:
     - target: {fileID: 6609279770973429064, guid: e1ba717e13d47c4468d91d96124ee544, type: 3}
       propertyPath: meterFill
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1190996923}
     - target: {fileID: 7231105742832394939, guid: e1ba717e13d47c4468d91d96124ee544, type: 3}
       propertyPath: m_Name
       value: Player
@@ -642,6 +692,11 @@ PrefabInstance:
 --- !u!4 &1326542017 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6610514527160554593, guid: e1ba717e13d47c4468d91d96124ee544, type: 3}
+  m_PrefabInstance: {fileID: 1214792252}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1438364278 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7231105742832394939, guid: e1ba717e13d47c4468d91d96124ee544, type: 3}
   m_PrefabInstance: {fileID: 1214792252}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1531789003
@@ -753,6 +808,17 @@ MonoBehaviour:
   cameraPos: {fileID: 1326542017}
   player: {fileID: 560990054}
   turnSpeed: 100
+--- !u!114 &1700606900 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3866213587466925425, guid: 2346ada1380dd584b8eff95aec72d090, type: 3}
+  m_PrefabInstance: {fileID: 885871625}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9396b1f832f0639479a54d62aa9f3781, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2080744459
 GameObject:
   m_ObjectHideFlags: 0

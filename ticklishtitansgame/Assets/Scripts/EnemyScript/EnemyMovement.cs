@@ -12,7 +12,7 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField]private float distanceBetween;
     public float jokeAttackRange = 15f;
     public float meleeAttackRange = 1.3f;
-
+    public TickleArea tickleAreaScript;
 
     private bool isMovementStopped = false;
     private float stopTimer = 2.0f;

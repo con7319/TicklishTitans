@@ -129,6 +129,7 @@ MonoBehaviour:
   distanceBetween: 0
   jokeAttackRange: 15
   meleeAttackRange: 1.3
+  tickleAreaScript: {fileID: 0}
 --- !u!54 &1576240535346826465
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -168,7 +169,7 @@ GameObject:
   - component: {fileID: 5821339300491829296}
   - component: {fileID: 3866213587466925425}
   m_Layer: 0
-  m_Name: TicklePoint
+  m_Name: ETicklePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -323,6 +324,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 2ca466446d658f649ab496b2f92230aa, type: 3}
+    - target: {fileID: 4664167681130229997, guid: 81b7fc8e4a85450479d7f2322e5288cf, type: 3}
+      propertyPath: m_Name
+      value: EHumorMeter
+      objectReference: {fileID: 0}
     - target: {fileID: 6386039068615792798, guid: 81b7fc8e4a85450479d7f2322e5288cf, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
