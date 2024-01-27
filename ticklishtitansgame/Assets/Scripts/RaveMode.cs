@@ -49,7 +49,7 @@ public class RaveMode : MonoBehaviour
 
     public Color randomColor()
     {
-        Color random = new Color(Random.value, Random.value, Random.value, 1.0f); ;
+        Color random = new Color(Random.value, Random.value, Random.value, 1.0f);
         return random;
     }
 
