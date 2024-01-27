@@ -7,10 +7,10 @@ using UnityEngine;
 using TMPro;
 
 public class Attack : MonoBehaviour
-
 {   
-    public TextMeshProUGUI jokeText;
-    [SerializeField]public GameObject jokeCanvas;
+    public Image windUpBar;
+    //public TextMeshProUGUI jokeText;
+    //[SerializeField]public GameObject jokeCanvas;
     public float displayTime = 10.0f;
     ArrayList jokesListArray = new ArrayList();
     private GameObject tickleArea = default;
@@ -18,15 +18,15 @@ public class Attack : MonoBehaviour
     private bool canAttack = true;
     private bool isAttacking = false;
     private float attackCooldown = 2.5f;
-
-
+    private float windTime = 0f;
     private bool tickling = false;
-    private int TickleDamage = 10;
+    private int TickleDamage;
+    private int level = 0;
 
     void Start()
     {
         tickleArea = transform.GetChild(0).gameObject;
-        jokeCanvas.SetActive(false);
+        // jokeCanvas.SetActive(false);
         string filePath = @"Assets\csv\jokeslist.csv";
         
         try
@@ -49,7 +49,7 @@ public class Attack : MonoBehaviour
 
     private void Update()
     {
-        if (canAttack && Input.GetMouseButtonDown(0))
+        if (canAttack && Input.GetMouseButton(0))
         {
             if (tickleAreaScript.inCollider && GameManager.Instance.isAttacking)
             {
@@ -69,29 +69,46 @@ public class Attack : MonoBehaviour
             isAttacking = false;
         }
 
-        if (GameManager.Instance.isAttacking && Input.GetMouseButtonDown(1))
+        if (GameManager.Instance.isAttacking && Input.GetMouseButton(1))
         {
-            Joke();
+            //Joke();
         }
+
+        if(GameManager.Instance.isAttacking && Input.GetMouseButtonUp(0))
+        {
+            SetWindTimeToZero();
+        }
+
+        FillBar(windTime);
     }
 
     private void Tickle()
     {
         if (canAttack)
         {
-            canAttack = false;
-            TickleDamage = 10; // Set TickleDamage here if you want to reset it every time Tickle is called
-            Debug.Log("Tickle");
-            tickleAreaScript.HahaTime(TickleDamage);
 
-            // Add animation code
-            // Make this do something
-
-            tickleArea.SetActive(true);
-
-            tickling = true;
-
-            StartCoroutine(AttackCooldown());
+            windTime += Time.deltaTime;
+        
+            if(windTime == 0)
+            {
+                Debug.Log("This shouldnt be seen");
+                level = 0;
+            }
+            else if(windTime > 1 && windTime < 2)
+            {
+                Debug.Log("Level 1");
+                level = 1;
+            }
+            else if(windTime > 2 && windTime < 3)
+            {
+                Debug.Log("Level 2");
+                level = 2;
+            }
+            else if(windTime > 3 && windTime < 4)
+            {
+                Debug.Log("Level 3");
+                level = 3;
+            }
         }
     }
     private IEnumerator AttackCooldown()
@@ -113,7 +130,7 @@ public class Attack : MonoBehaviour
             Debug.Log("joke chosen:");
             Debug.Log(line);
             
-            jokeText.text = line.ToString();
+            //jokeText.text = line.ToString();
             StartCoroutine(ShowAndHideCanvas(displayTime));
             }
         
@@ -123,12 +140,98 @@ public class Attack : MonoBehaviour
     private IEnumerator ShowAndHideCanvas(float time)
     {
         // Show the canvas
-        jokeCanvas.SetActive(true);
+        // jokeCanvas.SetActive(true);
 
         // Wait for the specified time
         yield return new WaitForSeconds(time);
 
         // Hide the canvas
-        jokeCanvas.SetActive(false);
+        // jokeCanvas.SetActive(false);
+    }
+
+    private void SetWindTimeToZero()
+    {
+        windTime = 0;
+
+        switch(level)
+        {
+            case 0:
+                Debug.Log("Nothing");
+                level = 0;
+                break;
+            case 1:
+                Debug.Log("1");
+                Level1();
+                level = 0;
+                break;
+            case 2:
+                Debug.Log("2");
+                Level2();
+                level = 0;
+                break;
+            case 3:
+                Debug.Log("3");
+                Level3();
+                level = 0;
+                break;
+        }
+    }
+
+    private void Level1()
+    {
+        canAttack = false;
+        TickleDamage = 2; // Set TickleDamage here if you want to reset it every time Tickle is called
+        Debug.Log("Tickle");
+        tickleAreaScript.HahaTime(TickleDamage);
+
+        // Add animation code
+        // Make this do something
+
+        tickleArea.SetActive(true);
+
+        tickling = true;
+
+        StartCoroutine(AttackCooldown());
+    }
+
+    private void Level2()
+    {
+        canAttack = false;
+        TickleDamage = 4; // Set TickleDamage here if you want to reset it every time Tickle is called
+        Debug.Log("Tickle");
+        tickleAreaScript.HahaTime(TickleDamage);
+
+        // Add animation code
+        // Make this do something
+
+        tickleArea.SetActive(true);
+
+        tickling = true;
+
+        StartCoroutine(AttackCooldown());
+    }
+
+    private void Level3()
+    {
+        canAttack = false;
+        TickleDamage = 6; // Set TickleDamage here if you want to reset it every time Tickle is called
+        Debug.Log("Tickle");
+        tickleAreaScript.HahaTime(TickleDamage);
+
+        // Add animation code
+        // Make this do something
+
+        tickleArea.SetActive(true);
+
+        tickling = true;
+
+        StartCoroutine(AttackCooldown());
+    }
+
+    public void FillBar(float fillValue)
+    {
+        float amount = (fillValue / 2f) * 180f/360;
+        windUpBar.fillAmount = amount;
+        
     }
 }

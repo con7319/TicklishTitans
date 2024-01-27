@@ -75,7 +75,7 @@ public class EnemyMovement : MonoBehaviour
     }
     public void JokeAttack()
     {
-        Debug.Log("Yo mama so fat....");
+        // Debug.Log("Yo mama so fat....");
     }
     public void TickleAttack()
     {
