@@ -13,6 +13,7 @@ public class EnemyMovement : MonoBehaviour
     public float jokeAttackRange = 15f;
     public float meleeAttackRange = 1.3f;
 
+
     private bool isMovementStopped = false;
     private float stopTimer = 2.0f;
 
@@ -72,10 +73,11 @@ public class EnemyMovement : MonoBehaviour
     }
     public void JokeAttack()
     {
-        Debug.Log("Yo mama so fat....");
+        //Debug.Log("Yo mama so fat....");
     }
     public void TickleAttack()
     {
-        Debug.Log("Tickle Tickle Tickle");
+
+       // Debug.Log("Tickle Tickle Tickle");
     }
 }
