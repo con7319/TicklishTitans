@@ -9,11 +9,21 @@ public class SceneChanger : MonoBehaviour
     public string scene;
     public Animator animator;
     public AudioSource audioSource;
+    public TickleArea tickleArea;
 
     // Start is called before the first frame update
     void Awake()
     {
         smiley = GameObject.Find("Smiley");
+        
+    }
+
+    private void Update()
+    {
+        if (tickleArea.currentFill == 100)
+        {
+            GameOver();
+        }
     }
 
     public void Play()
@@ -38,5 +48,19 @@ public class SceneChanger : MonoBehaviour
     public void Quit()
     {
         Application.Quit();
+    }
+
+    public void GameOver()
+    {
+        animator.SetBool("transition", true);
+        Debug.Log("animation played");
+
+        audioSource.Play();
+        Debug.Log("Audio played");
+
+        scene = "GameOver";
+        Debug.Log("Scene set to gameOver");
+
+        Invoke("SceneLoader", 2f);
     }
 }
