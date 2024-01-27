@@ -14,7 +14,7 @@ public class EnemyMovement : MonoBehaviour
     public float meleeAttackRange = 1.5f;
 
     private bool isMovementStopped = false;
-    private float stopTimer = 1.5f;
+    private float stopTimer = 2f;
 
     void Update()
     {
@@ -30,7 +30,6 @@ public class EnemyMovement : MonoBehaviour
             {
                 //move towards player to get into joke range
                 transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
-                animator.SetBool("isWalking", true);
                 
                 if (distanceBetween <= meleeAttackRange)
                 {
