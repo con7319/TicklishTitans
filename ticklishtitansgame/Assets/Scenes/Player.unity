@@ -1029,6 +1029,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MeterBarCan
       objectReference: {fileID: 0}
+    - target: {fileID: 3506876470835814852, guid: 902dffce978795d46a6cf2816d3c5f6b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7256806672933514366, guid: 902dffce978795d46a6cf2816d3c5f6b, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
