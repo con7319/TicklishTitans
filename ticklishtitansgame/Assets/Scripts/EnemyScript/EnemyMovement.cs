@@ -21,7 +21,7 @@ public class EnemyMovement : MonoBehaviour
         distanceBetween = Vector3.Distance(transform.position, Player.transform.position);//finds distance between player and enemy
         if(!isMovementStopped)
         {
-        
+            RotateTowardsPlayer();
             if(distanceBetween <= jokeAttackRange && distanceBetween > meleeAttackRange)
             {
                 JokeAttack();
@@ -31,7 +31,7 @@ public class EnemyMovement : MonoBehaviour
                 //move towards player to get into joke range
                 transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
                 
-                RotateTowardsPlayer();
+                
                 if (distanceBetween <= meleeAttackRange)
                 {
                     StopMovement();//melee range stop moving
@@ -57,7 +57,7 @@ public class EnemyMovement : MonoBehaviour
     void RotateTowardsPlayer()
     {
     //lots of math to rotate the enemy towards player
-    var offset = 270f;//MAYBE INCORRECT WHEN THE ENEMY MODEL GOES IN
+    var offset = 0f;//MAYBE INCORRECT WHEN THE ENEMY MODEL GOES IN
     Vector3 direction = target.transform.position - transform.position;
     direction.y = 0; //Eliminates any Y-axis movement of enemy
 
