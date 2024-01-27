@@ -8,7 +8,7 @@ public class Attack : MonoBehaviour
     public TickleArea tickleAreaScript;
     private bool canAttack = true;
     private bool isAttacking = false;
-    private float attackCooldown = 3f;
+    private float attackCooldown = 2.5f;
 
 
     private bool tickling = false;
