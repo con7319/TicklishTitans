@@ -111,7 +111,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 14
   m_CollisionDetection: 0
 --- !u!114 &4183239820731249897
 MonoBehaviour:
@@ -138,7 +138,7 @@ MonoBehaviour:
     zAxis: 1
     detectFloatingFragments: 0
     asynchronous: 0
-    insideMaterial: {fileID: 2100000, guid: b6747bf277df0e344ac544c7cfa37c62, type: 2}
+    insideMaterial: {fileID: 2100000, guid: fe3e3b8ebc1a32647b48b7ea88f534a8, type: 2}
     textureScale: {x: 1, y: 1}
     textureOffset: {x: 0, y: 0}
   refractureOptions:

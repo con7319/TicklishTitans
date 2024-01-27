@@ -5,7 +5,8 @@ using UnityEngine;
 public class FragmentManager : MonoBehaviour
 {
     private List<GameObject> fragments = new List<GameObject>();
-    private float timeToDestroy = 5f;
+    [Tooltip("Seconds til items de-spawn")]
+    [SerializeField]float timeToDestroy = 5f;//seconds til destroy
 
     void Update()
     {
