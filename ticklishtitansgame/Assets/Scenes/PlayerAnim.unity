@@ -423,6 +423,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1820219848422392096, guid: d23ee1c4708a02b4685060f7e805b3e2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.104491904
+      objectReference: {fileID: 0}
+    - target: {fileID: 1820219848422392096, guid: d23ee1c4708a02b4685060f7e805b3e2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.0034986513
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859430763253844441, guid: d23ee1c4708a02b4685060f7e805b3e2, type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: 19e8fda9d2ec85e408064cea4ef3ea67, type: 3}
+    - target: {fileID: 1859430763253844441, guid: d23ee1c4708a02b4685060f7e805b3e2, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 4d8ba3dce31251a49916fe0d3ecaa80f, type: 2}
     - target: {fileID: 4928620337205102873, guid: d23ee1c4708a02b4685060f7e805b3e2, type: 3}
       propertyPath: m_Name
       value: Hero Titan
