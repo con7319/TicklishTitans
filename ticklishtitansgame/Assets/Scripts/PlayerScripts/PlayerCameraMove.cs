@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class PlayerCameraMove : MonoBehaviour
 {
+    public Transform cameraPos;
     public Transform player;
     private float turnSpeed = 100f;
+    private float distance = 5f;
     private Vector3 offset;
 
     private void Start()
     {
-        offset = new Vector3(player.position.x, player.position.y + 0.8f, player.position.z + -4.5f);
+        offset = player.position - cameraPos.position;
     }
 
     private void Update()
@@ -25,9 +27,9 @@ public class PlayerCameraMove : MonoBehaviour
         float mouseX = Input.GetAxis("Mouse X");
 
         offset = Quaternion.AngleAxis(mouseX * turnSpeed, Vector3.up) * offset;
-        transform.position = player.position + offset;
+        transform.position = player.position - offset.normalized * distance;
         transform.LookAt(player.position, Vector3.up);
 
-        player.rotation = transform.rotation;
+        player.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
     }
 }
