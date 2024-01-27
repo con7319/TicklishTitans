@@ -777,6 +777,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2271459036370070305, guid: e1ba717e13d47c4468d91d96124ee544, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 2512485042888280842, guid: e1ba717e13d47c4468d91d96124ee544, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6439168787042341313, guid: e1ba717e13d47c4468d91d96124ee544, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 7231105742832394939, guid: e1ba717e13d47c4468d91d96124ee544, type: 3}
       propertyPath: m_Name
       value: Player
@@ -4044,17 +4056,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4894849518924494139, guid: dc53baa962b6d244cb9e81ec33c0865a, type: 3}
   m_PrefabInstance: {fileID: 371006420}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &394286085 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1755345229034968994, guid: e1ba717e13d47c4468d91d96124ee544, type: 3}
-  m_PrefabInstance: {fileID: 68455721}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9396b1f832f0639479a54d62aa9f3781, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &410954762
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5515,7 +5516,8 @@ MonoBehaviour:
   scene: 
   animator: {fileID: 180506908}
   audioSource: {fileID: 1530235743}
-  tickleArea: {fileID: 394286085}
+  tickleArea: {fileID: 0}
+  eTickleArea: {fileID: 0}
 --- !u!4 &502594487 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8402614890987328354, guid: 169e5f050a9f145489237cc7105f3c1d, type: 3}

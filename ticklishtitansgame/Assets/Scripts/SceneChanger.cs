@@ -10,6 +10,7 @@ public class SceneChanger : MonoBehaviour
     public Animator animator;
     public AudioSource audioSource;
     public TickleArea tickleArea;
+    public ETickleArea eTickleArea;
 
     // Start is called before the first frame update
     void Awake()
@@ -20,7 +21,15 @@ public class SceneChanger : MonoBehaviour
 
     private void Update()
     {
+        tickleArea = GameObject.Find("TicklePoint").GetComponent<TickleArea>();
+        eTickleArea = GameObject.Find("ETicklePoint").GetComponent<ETickleArea>();
+
         if (tickleArea.currentFill == 100)
+        {
+            GameOver();
+        }
+
+        if(eTickleArea.currentFill == 100)
         {
             GameOver();
         }
