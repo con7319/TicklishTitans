@@ -7824,10 +7824,6 @@ PrefabInstance:
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e56899687a42f54aa20a3b27f073806, type: 3}
 --- !u!1001 &1171837698
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of 77b0d37 (Merge branch 'main' into Crowd)
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -8020,9 +8016,6 @@ Transform:
   m_PrefabInstance: {fileID: 1342173389}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1221777706
-<<<<<<< HEAD
-=======
->>>>>>> parent of 77b0d37 (Merge branch 'main' into Crowd)
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -8215,8 +8208,6 @@ Transform:
   m_PrefabInstance: {fileID: 1342173389}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1221777706
-=======
->>>>>>> parent of 77b0d37 (Merge branch 'main' into Crowd)
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
