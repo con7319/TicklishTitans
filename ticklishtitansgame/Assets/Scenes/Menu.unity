@@ -884,7 +884,7 @@ GameObject:
   - component: {fileID: 1158296837}
   - component: {fileID: 1158296836}
   m_Layer: 0
-  m_Name: Audio Source
+  m_Name: LaughNoise
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -994,12 +994,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1158296835}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.3804, y: 9.017363, z: 26.408838}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1278407944}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1278407943
 GameObject:
@@ -1031,7 +1031,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1158296837}
   m_Father: {fileID: 1796084906}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -1438,7 +1439,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   smiley: {fileID: 0}
   scene: 
-  animate: {fileID: 1278407945}
+  animator: {fileID: 1278407945}
+  audioSource: {fileID: 1158296836}
 --- !u!4 &1758112782
 Transform:
   m_ObjectHideFlags: 0
@@ -1584,4 +1586,3 @@ SceneRoots:
   - {fileID: 678082986}
   - {fileID: 1796084906}
   - {fileID: 1548440331}
-  - {fileID: 1158296837}
