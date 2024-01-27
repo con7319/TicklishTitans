@@ -261,7 +261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc7e9aca577d8e940a93765d18c78b91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tickleAreaScript: {fileID: 0}
+  tickleAreaScript: {fileID: 1755345229034968994}
 --- !u!114 &3311351588585422166
 MonoBehaviour:
   m_ObjectHideFlags: 0
