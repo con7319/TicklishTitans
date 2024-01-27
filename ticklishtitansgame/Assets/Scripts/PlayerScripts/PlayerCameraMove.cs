@@ -7,7 +7,6 @@ public class PlayerCameraMove : MonoBehaviour
     public Transform cameraPos;
     public Transform player;
 
-    //private float xRotation = 0f;
     [SerializeField]private float turnSpeed = 40f;
     private float distance = 5f;
     private Vector3 offset;
