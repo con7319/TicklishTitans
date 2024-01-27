@@ -6,12 +6,12 @@ public class Parry : MonoBehaviour
 {
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.LeftControl))
+        if(Input.GetKeyDown(KeyCode.LeftControl)) //KeyCode can be changed
         {
             CringeParry();
         }
 
-        if(Input.GetKeyDown(KeyCode.LeftShift))
+        if(Input.GetKeyDown(KeyCode.LeftShift)) //KeyCode can be changed
         {
             TickleParry();
         }
