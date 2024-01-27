@@ -14,6 +14,7 @@ public class RaveMode : MonoBehaviour
     public GameObject background;
     private Renderer myRenderer;
     private Material myMaterial;
+    public Image image;
 
 
     // Start is called before the first frame update
@@ -70,6 +71,7 @@ public class RaveMode : MonoBehaviour
 
         myMaterial.color = Color.white;
         title.color = Color.white;
+        image.color = Color.white;
     }
 
     void StartRaveMode()
@@ -88,5 +90,6 @@ public class RaveMode : MonoBehaviour
 
         title.color = randomColor();
         myMaterial.color = randomColor();
+        image.color = randomColor();
     }
 }
