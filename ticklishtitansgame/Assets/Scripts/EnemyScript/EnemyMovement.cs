@@ -14,6 +14,7 @@ public class EnemyMovement : MonoBehaviour
     public float meleeAttackRange = 1.5f;
     private GameObject eTicklePoint = default;
     public ETickleArea tickleAreaScript;
+    public Defend defentScript;
     private bool tickling = false;
     private int tickleDamage = 10;
     private bool isMovementStopped = false;
@@ -79,7 +80,11 @@ public class EnemyMovement : MonoBehaviour
     public void TickleAttack()
     {
         tickleDamage = 10;
-        tickleAreaScript.HahaTime(tickleDamage);
+
+        if(!defentScript.isCrossingArms)
+        {
+            tickleAreaScript.HahaTime(tickleDamage);
+        }
 
         // Add animation code
         // Make this do something
