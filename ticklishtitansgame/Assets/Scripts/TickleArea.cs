@@ -8,7 +8,7 @@ public class TickleArea : MonoBehaviour
     public int Mfull = 100;
     public int MEmpt = 0;
     public int currentFill;
-    public MeterScript meterFill;
+    public EMeterScript meterFill;
     public bool inCollider = false;
 
 
