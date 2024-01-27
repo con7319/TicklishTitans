@@ -167,7 +167,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7282974318188955245}
   - component: {fileID: 5821339300491829296}
-  - component: {fileID: 3866213587466925425}
+  - component: {fileID: 220686141788172580}
   m_Layer: 0
   m_Name: ETicklePoint
   m_TagString: Untagged
@@ -211,7 +211,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.9510561, y: 1, z: 1}
   m_Center: {x: -0.024471954, y: 0, z: 0}
---- !u!114 &3866213587466925425
+--- !u!114 &220686141788172580
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -220,7 +220,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4707599728326193859}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9396b1f832f0639479a54d62aa9f3781, type: 3}
+  m_Script: {fileID: 11500000, guid: 3ad616c590c9a6c45b146d55ebf0bd45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Mfull: 100

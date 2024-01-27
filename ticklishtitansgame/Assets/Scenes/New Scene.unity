@@ -457,7 +457,7 @@ PrefabInstance:
     - target: {fileID: 5787297739875456920, guid: 2346ada1380dd584b8eff95aec72d090, type: 3}
       propertyPath: tickleAreaScript
       value: 
-      objectReference: {fileID: 1700606900}
+      objectReference: {fileID: 1700606902}
     - target: {fileID: 7875258283688739398, guid: 2346ada1380dd584b8eff95aec72d090, type: 3}
       propertyPath: m_Name
       value: EHumorMeter
@@ -466,10 +466,15 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3866213587466925425, guid: 2346ada1380dd584b8eff95aec72d090, type: 3}
+    - {fileID: 220686141788172580, guid: 2346ada1380dd584b8eff95aec72d090, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4707599728326193859, guid: 2346ada1380dd584b8eff95aec72d090, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1700606902}
   m_SourcePrefab: {fileID: 100100000, guid: 2346ada1380dd584b8eff95aec72d090, type: 3}
 --- !u!1 &947161149
 GameObject:
@@ -808,17 +813,28 @@ MonoBehaviour:
   cameraPos: {fileID: 1326542017}
   player: {fileID: 560990054}
   turnSpeed: 100
---- !u!114 &1700606900 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3866213587466925425, guid: 2346ada1380dd584b8eff95aec72d090, type: 3}
+--- !u!1 &1700606898 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4707599728326193859, guid: 2346ada1380dd584b8eff95aec72d090, type: 3}
   m_PrefabInstance: {fileID: 885871625}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+--- !u!114 &1700606902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700606898}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9396b1f832f0639479a54d62aa9f3781, type: 3}
+  m_Script: {fileID: 11500000, guid: 3ad616c590c9a6c45b146d55ebf0bd45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Mfull: 100
+  MEmpt: 0
+  currentFill: 0
+  meterFill: {fileID: 392062928}
+  inCollider: 0
 --- !u!1 &2080744459
 GameObject:
   m_ObjectHideFlags: 0

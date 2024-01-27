@@ -4,54 +4,63 @@ using UnityEngine;
 
 public class Attack : MonoBehaviour
 {
-    private GameObject TickleArea = default;
+    private GameObject tickleArea = default;
     public TickleArea tickleAreaScript;
+    private bool canAttack = true;
+    private bool isAttacking = false;
+    private float attackCooldown = 3f;
 
 
     private bool tickling = false;
     private int TickleDamage = 10;
 
-    private float itsTickleTime = 0.25f;
-    private float timer = 0f;
 
     void Start()
     {
-        TickleArea = transform.GetChild(0).gameObject;
+        tickleArea = transform.GetChild(0).gameObject;
     }
 
     private void Update()
     {
-        if (tickleAreaScript.inCollider == true && GameManager.Instance.isAttacking && Input.GetMouseButtonDown(0))
+        if (canAttack && Input.GetMouseButtonDown(0))
         {
-
-            Tickle();
+            if (tickleAreaScript.inCollider && GameManager.Instance.isAttacking)
+            {
+                isAttacking = true;
+                Tickle();
+            }
         }
 
         if (tickling)
         {
-            timer += Time.deltaTime;
+            tickleArea.SetActive(tickling);
+        }
 
-            if (timer > itsTickleTime)
-            {
-                timer = 0;
-                tickling = false;
-                TickleArea.SetActive(tickling);
-            }
+        // Check if the attack input has been released
+        if (isAttacking && !Input.GetMouseButton(0))
+        {
+            isAttacking = false;
         }
     }
 
     private void Tickle()
     {
-        TickleDamage = 10; // Set TickleDamage here if you want to reset it every time Tickle is called
-        Debug.Log("Tickle");
-        tickleAreaScript.HahaTime(TickleDamage);
+        if (canAttack)
+        {
+            canAttack = false;
+            TickleDamage = 10; // Set TickleDamage here if you want to reset it every time Tickle is called
+            Debug.Log("Tickle");
+            tickleAreaScript.HahaTime(TickleDamage);
 
-        // Add animation code
-        // Make this do something
+            // Add animation code
+            // Make this do something
 
-        TickleArea.SetActive(true);
+            tickleArea.SetActive(true);
 
-        tickling = true;
+            tickling = true;
+
+            StartCoroutine(AttackCooldown());
+        }
     }
 
     private void Joke()
@@ -60,5 +69,10 @@ public class Attack : MonoBehaviour
 
         //Add animation code
         //Make this do something
+    }
+    private IEnumerator AttackCooldown()
+    {
+        yield return new WaitForSeconds(attackCooldown);
+        canAttack = true;
     }
 }
