@@ -235,6 +235,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraPos: {fileID: 236551163}
   player: {fileID: 2079865838}
+  turnSpeed: 100
 --- !u!1 &697036228
 GameObject:
   m_ObjectHideFlags: 0
