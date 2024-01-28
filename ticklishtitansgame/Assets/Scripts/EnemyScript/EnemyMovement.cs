@@ -13,32 +13,71 @@ public class EnemyMovement : MonoBehaviour
     public float jokeAttackRange = 15f;
     public float meleeAttackRange = 1.5f;
     private GameObject eTicklePoint = default;
+    public GameObject jokeProjectile;
+    public Transform firePoint;
     public ETickleArea tickleAreaScript;
     public Defend defentScript;
+    public bool isTickleBlocking = false;
+    public bool canTickleBlock = true;
+    public bool isJokeBlocking = false;
+    public bool canJokeBlock = true;
+    public bool canAttack = true;
     private bool tickling = false;
     private int tickleDamage = 10;
     private bool isMovementStopped = false;
     private float stopTimer = 2f;
+    private float shootTimer = 2f;
 
     void Update()
     {
         distanceBetween = Vector3.Distance(transform.position, Player.transform.position);//finds distance between player and enemy
         if(!isMovementStopped)
         {
+            shootTimer -= Time.deltaTime;
+
             RotateTowardsPlayer();
-            if(distanceBetween <= jokeAttackRange && distanceBetween > meleeAttackRange)
+            if(shootTimer <= 0 && distanceBetween <= jokeAttackRange && distanceBetween > meleeAttackRange)
             {
-                JokeAttack();
+                int random1 = Random.Range(0, 2);
+
+                switch(random1)
+                {
+                    case 0:
+                        Debug.Log("A");
+                        JokeAttack();
+                        break;
+                    case 1:
+                        Debug.Log("B");
+                        JokeBlock();
+                        break;
+                }
+
+                shootTimer = 2f;
             }
             else
             {
                 //move towards player to get into joke range
                 transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
                 
-                if (distanceBetween <= meleeAttackRange)
+                if (canAttack && distanceBetween <= meleeAttackRange)
                 {
                     StopMovement();//melee range stop moving
-                    TickleAttack();
+
+                    int random2 = Random.Range(0, 2);
+
+                    Debug.Log(random2);
+
+                    switch(random2)
+                    {
+                        case 0:
+                            Debug.Log("A");
+                            TickleAttack();
+                            break;
+                        case 1:
+                            Debug.Log("B");
+                            TickleBlock();
+                            break;
+                    }
                 }
             }
             //move towards player while attacking with jokes
@@ -50,6 +89,7 @@ public class EnemyMovement : MonoBehaviour
 
             if(stopTimer <= 0)
             {
+                canAttack = true;
                 isMovementStopped = false;
                 speed = 3.0f;
                 stopTimer = 3.0f;
@@ -86,9 +126,14 @@ public class EnemyMovement : MonoBehaviour
     public void JokeAttack()
     {
         // Debug.Log("Yo mama so fat....");
+
+        GameObject jokeProjectilePrefab = Instantiate(jokeProjectile, firePoint.position, firePoint.rotation);
+        Destroy(jokeProjectilePrefab, 1f);
     }
     public void TickleAttack()
     {
+        canAttack = false;
+
         tickleDamage = 10;
 
         if(!defentScript.isCrossingArms)
@@ -101,5 +146,49 @@ public class EnemyMovement : MonoBehaviour
 
         tickling = true;
         Debug.Log("Tickle Tickle Tickle");
+    }
+
+    private void TickleBlock()
+    {
+        isTickleBlocking = true;
+
+        StartCoroutine(TickleBlockLasts());
+        StartCoroutine(TickleBlockCooldown());
+    }
+
+    private IEnumerator TickleBlockLasts()
+    {
+        yield return new WaitForSeconds(2f);
+
+        isTickleBlocking = false;
+    }
+
+    private IEnumerator TickleBlockCooldown()
+    {
+        yield return new WaitForSeconds(5f);
+
+        canTickleBlock = true;
+    }
+
+    private void JokeBlock()
+    {
+        isJokeBlocking = true;
+
+        StartCoroutine(JokeBlockLasts());
+        StartCoroutine(JokeBlockCooldown());
+    }
+
+    private IEnumerator JokeBlockLasts()
+    {
+        yield return new WaitForSeconds(2f);
+
+        isJokeBlocking = false;
+    }
+
+    private IEnumerator JokeBlockCooldown()
+    {
+        yield return new WaitForSeconds(5f);
+
+        canJokeBlock = true;
     }
 }

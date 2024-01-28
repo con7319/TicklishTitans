@@ -6,8 +6,11 @@ public class Defend : MonoBehaviour
 {
     public bool isCrossingArms = false;
     public bool canCrossArms = true;
+    public bool isCoveringEars = false;
+    public bool canCoverEars = true;
     private float crossArmsCooldown = 5f;
     private float armsCrossedTime = 3f;
+    private float coverEarsCooldown = 5f;
 
     private void Update()
     {
@@ -24,10 +27,12 @@ public class Defend : MonoBehaviour
 
     private void CoverEars()
     {
+        canCoverEars = false;
         Debug.Log("Covering ears");
 
-        //Add animation code
-        //Make this do something
+        isCoveringEars = true;
+
+
     }
 
     private void CrossArms()
@@ -52,5 +57,11 @@ public class Defend : MonoBehaviour
     {
         yield return new WaitForSeconds(crossArmsCooldown);
         canCrossArms = true;
+    }
+
+    private IEnumerator CoverEarsCooldown()
+    {
+        yield return new WaitForSeconds(coverEarsCooldown);
+        canCoverEars = true;
     }
 }
