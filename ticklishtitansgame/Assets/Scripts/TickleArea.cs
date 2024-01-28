@@ -24,7 +24,7 @@ public class TickleArea : MonoBehaviour
         {
             Debug.Log("Trigger entered by an enemy.");
             inCollider = true;
-            MeterScript fillMeter = collider.GetComponentInChildren<MeterScript>();
+            EMeterScript fillMeter = collider.GetComponentInChildren<EMeterScript>();
             if (fillMeter != null)
             {
                 Debug.Log("you are the tickle");
@@ -42,7 +42,7 @@ public class TickleArea : MonoBehaviour
             inCollider = false;
             Debug.Log("Trigger exited by an enemy.");
 
-            MeterScript fillMeter = collider.GetComponentInChildren<MeterScript>();
+            EMeterScript fillMeter = collider.GetComponentInChildren<EMeterScript>();
             if (fillMeter != null)
             {
                 Debug.Log("you are the tickle");

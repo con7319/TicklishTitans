@@ -261,7 +261,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc7e9aca577d8e940a93765d18c78b91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  windUpBar: {fileID: 0}
+  jokeText: {fileID: 0}
+  jokeCanvas: {fileID: 0}
+  displayTime: 10
   tickleAreaScript: {fileID: 1755345229034968994}
+  projectile: {fileID: 0}
+  initialVelocity: 20
 --- !u!114 &3311351588585422166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -274,6 +280,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46a936721f6e2754d94b770471877c7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isCrossingArms: 0
+  canCrossArms: 1
 --- !u!114 &5015777071820226460
 MonoBehaviour:
   m_ObjectHideFlags: 0
