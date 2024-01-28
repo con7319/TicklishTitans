@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Defend : MonoBehaviour
 {
+    public bool isCrossingArms = false;
+    public bool canCrossArms = true;
+    private float crossArmsCooldown = 5f;
+    private float armsCrossedTime = 3f;
+
     private void Update()
     {
         if(GameManager.Instance.isDefending && Input.GetMouseButtonDown(0))
@@ -11,7 +16,7 @@ public class Defend : MonoBehaviour
             CoverEars();
         }
 
-        if(GameManager.Instance.isDefending && Input.GetMouseButtonDown(1))
+        if(canCrossArms && GameManager.Instance.isDefending && Input.GetMouseButtonDown(1))
         {
             CrossArms();
         }
@@ -27,9 +32,25 @@ public class Defend : MonoBehaviour
 
     private void CrossArms()
     {
+        canCrossArms = false;
         Debug.Log("Crossing arms");
 
-        //Add animation code
-        //Make this do something
+        isCrossingArms = true;
+
+        StartCoroutine(CrossingArmTime());
+        StartCoroutine(CoverArmssCooldown());
+    }
+
+    private IEnumerator CrossingArmTime()
+    {
+        yield return new WaitForSeconds(armsCrossedTime);
+
+        isCrossingArms = false;
+    }
+
+    private IEnumerator CoverArmssCooldown()
+    {
+        yield return new WaitForSeconds(crossArmsCooldown);
+        canCrossArms = true;
     }
 }
