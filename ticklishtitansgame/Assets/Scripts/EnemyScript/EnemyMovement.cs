@@ -13,22 +13,29 @@ public class EnemyMovement : MonoBehaviour
     public float jokeAttackRange = 15f;
     public float meleeAttackRange = 1.5f;
     private GameObject eTicklePoint = default;
+    public GameObject jokeProjectile;
+    public Transform firePoint;
     public ETickleArea tickleAreaScript;
     public Defend defentScript;
     private bool tickling = false;
     private int tickleDamage = 10;
     private bool isMovementStopped = false;
     private float stopTimer = 2f;
+    private float shootTimer = 2f;
 
     void Update()
     {
         distanceBetween = Vector3.Distance(transform.position, Player.transform.position);//finds distance between player and enemy
         if(!isMovementStopped)
         {
+            shootTimer -= Time.deltaTime;
+
             RotateTowardsPlayer();
-            if(distanceBetween <= jokeAttackRange && distanceBetween > meleeAttackRange)
+            if(shootTimer <= 0 && distanceBetween <= jokeAttackRange && distanceBetween > meleeAttackRange)
             {
                 JokeAttack();
+
+                shootTimer = 2f;
             }
             else
             {
@@ -76,6 +83,9 @@ public class EnemyMovement : MonoBehaviour
     public void JokeAttack()
     {
         // Debug.Log("Yo mama so fat....");
+
+        GameObject jokeProjectilePrefab = Instantiate(jokeProjectile, firePoint.position, firePoint.rotation);
+        Destroy(jokeProjectilePrefab, 1f);
     }
     public void TickleAttack()
     {

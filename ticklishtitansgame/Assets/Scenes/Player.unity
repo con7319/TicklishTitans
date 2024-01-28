@@ -626,17 +626,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1109433365}
   m_CullTransparentMesh: 1
---- !u!114 &1152301838 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3027984417429909908, guid: 2346ada1380dd584b8eff95aec72d090, type: 3}
-  m_PrefabInstance: {fileID: 1175311140}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1ccdc8cb249d6043969b8322544258a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1175311140
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -706,9 +695,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2079865838}
     - target: {fileID: 5787297739875456920, guid: 2346ada1380dd584b8eff95aec72d090, type: 3}
+      propertyPath: firePoint
+      value: 
+      objectReference: {fileID: 1289693725}
+    - target: {fileID: 5787297739875456920, guid: 2346ada1380dd584b8eff95aec72d090, type: 3}
       propertyPath: defentScript
       value: 
       objectReference: {fileID: 2079865849}
+    - target: {fileID: 5787297739875456920, guid: 2346ada1380dd584b8eff95aec72d090, type: 3}
+      propertyPath: jokeProjectile
+      value: 
+      objectReference: {fileID: 2268826363423010360, guid: ec7108dc769d565439deb36995c2121a, type: 3}
     - target: {fileID: 5787297739875456920, guid: 2346ada1380dd584b8eff95aec72d090, type: 3}
       propertyPath: tickleAreaScript
       value: 
@@ -725,7 +722,8 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4238451897547647245, guid: 2346ada1380dd584b8eff95aec72d090, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -937,6 +935,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ad616c590c9a6c45b146d55ebf0bd45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1289693725 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7282974318188955245, guid: 2346ada1380dd584b8eff95aec72d090, type: 3}
+  m_PrefabInstance: {fileID: 1175311140}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1632217243
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1161,7 +1164,7 @@ PrefabInstance:
     - target: {fileID: 1755345229034968994, guid: e1ba717e13d47c4468d91d96124ee544, type: 3}
       propertyPath: meterFill
       value: 
-      objectReference: {fileID: 1152301838}
+      objectReference: {fileID: 0}
     - target: {fileID: 1852518073322526631, guid: e1ba717e13d47c4468d91d96124ee544, type: 3}
       propertyPath: m_LocalPosition.x
       value: -16.67
