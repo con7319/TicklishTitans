@@ -9,8 +9,8 @@ using TMPro;
 public class Attack : MonoBehaviour
 {   
     public Image windUpBar;
-    //public TextMeshProUGUI jokeText;
-    //[SerializeField]public GameObject jokeCanvas;
+    public TextMeshProUGUI jokeText;
+    [SerializeField]public GameObject jokeCanvas;
     public float displayTime = 10.0f;
     ArrayList jokesListArray = new ArrayList();
     private GameObject tickleArea = default;
@@ -22,11 +22,13 @@ public class Attack : MonoBehaviour
     private bool tickling = false;
     private int TickleDamage;
     private int level = 0;
+    public GameObject Bullet;
+    public float initialVelocity;
 
     void Start()
     {
         tickleArea = transform.GetChild(0).gameObject;
-        // jokeCanvas.SetActive(false);
+        jokeCanvas.SetActive(false);
         string filePath = @"Assets\csv\jokeslist.csv";
         
         try
@@ -69,9 +71,9 @@ public class Attack : MonoBehaviour
             isAttacking = false;
         }
 
-        if (GameManager.Instance.isAttacking && Input.GetMouseButton(1))
+        if (GameManager.Instance.isAttacking && Input.GetMouseButtonDown(1))
         {
-            //Joke();
+            Joke();
         }
 
         if(GameManager.Instance.isAttacking && Input.GetMouseButtonUp(0))
@@ -130,23 +132,25 @@ public class Attack : MonoBehaviour
             Debug.Log("joke chosen:");
             Debug.Log(line);
             
-            //jokeText.text = line.ToString();
+            jokeText.text = line.ToString();
             StartCoroutine(ShowAndHideCanvas(displayTime));
             }
-        
-        //Add animation code
+
+        var projectileInstance = GameObject.Instantiate(Bullet, this.transform.position, Quaternion.identity);
+        projectileInstance.GetComponent<Rigidbody>().velocity = initialVelocity * this.transform.forward;
         
     }
     private IEnumerator ShowAndHideCanvas(float time)
     {
-        // Show the canvas
-        // jokeCanvas.SetActive(true);
-
+        //Show the canvas
+        jokeCanvas.SetActive(true);
+        isAttacking = false;
         // Wait for the specified time
         yield return new WaitForSeconds(time);
 
         // Hide the canvas
-        // jokeCanvas.SetActive(false);
+        isAttacking = true;
+        jokeCanvas.SetActive(false);
     }
 
     private void SetWindTimeToZero()

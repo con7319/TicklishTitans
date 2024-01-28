@@ -56,7 +56,17 @@ public class EnemyMovement : MonoBehaviour
             }
         }
     }
-
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Bullet"))
+        {
+            int jokeDamage = 15;
+            tickleAreaScript.HahaTime(jokeDamage);
+            
+        }
+    }
+        
+    
     void RotateTowardsPlayer()
     {
     //lots of math to rotate the enemy towards player

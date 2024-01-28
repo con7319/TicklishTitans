@@ -1,0 +1,658 @@
+fileFormatVersion: 2
+guid: 2ed0fb64ae3f43246be6634edd72a57d
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bullettextures_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 504
+        width: 52
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5298485, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52d1dffcbf7b06049b60aaea7f4768f7
+      internalID: 1613581848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bullettextures_1
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 504
+        width: 52.333332
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41dfb1f4a67290e4a81869600abf617d
+      internalID: -2031776564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bullettextures_2
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 504
+        width: 52.333332
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50ece3984f9a8304fa173bb1610b1ebc
+      internalID: 997982224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bullettextures_3
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 504
+        width: 52.333332
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79754d6669fb0a443b3da648f8c3130d
+      internalID: 332953389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bullettextures_4
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 504
+        width: 52.333332
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b38caf95935ea141ba24f008fe3a750
+      internalID: 1210113881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bullettextures_5
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 504
+        width: 52
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85dad17941c1fb040b6e3b25f412e1a8
+      internalID: -1556014317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bullettextures_6
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 504
+        width: 52
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52c77ca91775e5a47a7f5853f4a455ef
+      internalID: 405578692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bullettextures_7
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 503
+        width: 52
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a112afe84bbea2e4897ec3078cfc6775
+      internalID: -378793098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bullettextures_8
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 503
+        width: 52
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00fe1d60af7f4df4b8ec3c1cbb746524
+      internalID: -332592418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bullettextures_9
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 446
+        width: 52
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a3167dce8d6de14d8fcb5c52b650dfb
+      internalID: 1204015742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bullettextures_10
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 446
+        width: 52
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0031b5fe8f45ea24badd26fa19fd9a8a
+      internalID: 2099674758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bullettextures_11
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 447
+        width: 52
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23c8d344016557043a2b19e53df5910d
+      internalID: 1724086766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bullettextures_12
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 446
+        width: 52
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fe8399cbef9cdc458a91aa3eb67f950
+      internalID: -651894069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bullettextures_13
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 447
+        width: 52
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec9e2d5cdb1f97b408ef70b2eb64e705
+      internalID: 1754832189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bullettextures_14
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 447
+        width: 52
+        height: 56
+      alignment: 9
+      pivot: {x: 0.4358027, y: 0.50000054}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 378fb607518f4654cbdef02f95578119
+      internalID: 763865335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: haha
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 323
+        width: 99
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a681aaabb510c234d8bac6def780647e
+      internalID: -175779401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lol
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 263
+        width: 66
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 413d5c2067b52324594f097e84260428
+      internalID: 1239694875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lmao
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 204
+        width: 102
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 641eca40384e7d845a828f455486f147
+      internalID: 294711897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rofl
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 143
+        width: 87
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd144cd52100c8047bad19eccd873149
+      internalID: 799904366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ded
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 83
+        width: 77
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47ce8708c931c5d4d951fa1b589f6e83
+      internalID: 1965063364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cringe
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 24
+        width: 130
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fe5dc78b4d1d004785a5435c6632f92
+      internalID: 817811017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 057cc5dc574618949b7ccce8cc55090e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      bullettextures_0: 1613581848
+      bullettextures_1: -2031776564
+      bullettextures_10: 2099674758
+      bullettextures_11: 1724086766
+      bullettextures_12: -651894069
+      bullettextures_13: 1754832189
+      bullettextures_14: 763865335
+      bullettextures_15: -1908317841
+      bullettextures_16: -1149798303
+      bullettextures_17: 1113138229
+      bullettextures_18: -2079022305
+      bullettextures_19: -1822970409
+      bullettextures_2: 997982224
+      bullettextures_20: -1341557999
+      bullettextures_21: -89023736
+      bullettextures_22: 1210055243
+      bullettextures_23: 648198354
+      bullettextures_24: -33835276
+      bullettextures_25: 210342554
+      bullettextures_26: 357972051
+      bullettextures_28: -1055920532
+      bullettextures_29: -403715927
+      bullettextures_3: 332953389
+      bullettextures_30: 714022609
+      bullettextures_31: -1335837483
+      bullettextures_32: 210805587
+      bullettextures_33: -815952646
+      bullettextures_34: 598471795
+      bullettextures_35: -1514852925
+      bullettextures_37: 1480004571
+      bullettextures_38: -537349383
+      bullettextures_39: -1528692689
+      bullettextures_4: 1210113881
+      bullettextures_40: -639323189
+      bullettextures_41: -466789813
+      bullettextures_42: 1317829000
+      bullettextures_43: 9387709
+      bullettextures_44: -1474056196
+      bullettextures_46: 142889410
+      bullettextures_47: 64461332
+      bullettextures_48: -2086569692
+      bullettextures_49: -603729769
+      bullettextures_5: -1556014317
+      bullettextures_50: -1764950441
+      bullettextures_51: -2006118094
+      bullettextures_52: -389662662
+      bullettextures_53: -1143526980
+      bullettextures_55: 1024480817
+      bullettextures_56: -807112904
+      bullettextures_57: 498852470
+      bullettextures_58: 294266993
+      bullettextures_59: -1536079802
+      bullettextures_6: 405578692
+      bullettextures_60: -1920966167
+      bullettextures_61: 805258819
+      bullettextures_62: -797025617
+      bullettextures_64: 1594679311
+      bullettextures_65: -1767670104
+      bullettextures_66: 1595016992
+      bullettextures_67: -1481948297
+      bullettextures_68: 964258082
+      bullettextures_69: -2045534165
+      bullettextures_7: -378793098
+      bullettextures_70: -1836441225
+      bullettextures_71: -1952710378
+      bullettextures_73: -66498218
+      bullettextures_74: -918337921
+      bullettextures_75: -47335778
+      bullettextures_76: 964654224
+      bullettextures_77: 1100599921
+      bullettextures_78: 1729790101
+      bullettextures_79: 878544796
+      bullettextures_8: -332592418
+      bullettextures_80: -864165248
+      bullettextures_81: -1294929164
+      bullettextures_82: 786212885
+      bullettextures_83: -1646420318
+      bullettextures_84: -809769219
+      bullettextures_85: -1183097149
+      bullettextures_86: 1044965071
+      bullettextures_87: 1151553063
+      bullettextures_88: 307458727
+      bullettextures_89: -1392526465
+      bullettextures_9: 1204015742
+      cringe: 817811017
+      ded: 1965063364
+      haha: -175779401
+      lmao: 294711897
+      lol: 1239694875
+      rofl: 799904366
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
