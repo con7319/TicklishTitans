@@ -153,7 +153,7 @@ GameObject:
   - component: {fileID: 1357437326278960940}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -266,7 +266,8 @@ MonoBehaviour:
   jokeCanvas: {fileID: 0}
   displayTime: 10
   tickleAreaScript: {fileID: 1755345229034968994}
-  projectile: {fileID: 0}
+  enemyMovementScript: {fileID: 0}
+  Bullet: {fileID: 0}
   initialVelocity: 20
 --- !u!114 &3311351588585422166
 MonoBehaviour:
@@ -282,6 +283,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isCrossingArms: 0
   canCrossArms: 1
+  isCoveringEars: 0
+  canCoverEars: 1
 --- !u!114 &5015777071820226460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -306,6 +309,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1719e3f007a066e41bf87b7918b22b51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tickleNJoke: {fileID: 0}
+  Defending: {fileID: 0}
+  lAtk: {fileID: 0}
+  lDef: {fileID: 0}
+  rAtk: {fileID: 0}
+  rDef: {fileID: 0}
 --- !u!54 &6741166559223264054
 Rigidbody:
   m_ObjectHideFlags: 0

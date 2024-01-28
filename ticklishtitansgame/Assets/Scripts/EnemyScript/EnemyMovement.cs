@@ -38,7 +38,7 @@ public class EnemyMovement : MonoBehaviour
             RotateTowardsPlayer();
             if(shootTimer <= 0 && distanceBetween <= jokeAttackRange && distanceBetween > meleeAttackRange)
             {
-                int random1 = Random.Range(0, 2);
+                int random1 = Random.Range(0, 4);
 
                 switch(random1)
                 {
@@ -63,7 +63,7 @@ public class EnemyMovement : MonoBehaviour
                 {
                     StopMovement();//melee range stop moving
 
-                    int random2 = Random.Range(0, 2);
+                    int random2 = Random.Range(0, 4);
 
                     Debug.Log(random2);
 
@@ -129,6 +129,9 @@ public class EnemyMovement : MonoBehaviour
 
         GameObject jokeProjectilePrefab = Instantiate(jokeProjectile, firePoint.position, firePoint.rotation);
         Destroy(jokeProjectilePrefab, 1f);
+        animator.SetBool("isJoking", true);
+        StartCoroutine(AnimCooldown());
+
     }
     public void TickleAttack()
     {
@@ -139,6 +142,8 @@ public class EnemyMovement : MonoBehaviour
         if(!defentScript.isCrossingArms)
         {
             tickleAreaScript.HahaTime(tickleDamage);
+            animator.SetBool("isTickling", true);
+            StartCoroutine(AnimCooldown());
         }
 
         // Add animation code
@@ -151,7 +156,7 @@ public class EnemyMovement : MonoBehaviour
     private void TickleBlock()
     {
         isTickleBlocking = true;
-
+        animator.SetBool("isTBlocking", true);
         StartCoroutine(TickleBlockLasts());
         StartCoroutine(TickleBlockCooldown());
     }
@@ -159,7 +164,7 @@ public class EnemyMovement : MonoBehaviour
     private IEnumerator TickleBlockLasts()
     {
         yield return new WaitForSeconds(2f);
-
+        animator.SetBool("isTBlocking", false);
         isTickleBlocking = false;
     }
 
@@ -173,7 +178,7 @@ public class EnemyMovement : MonoBehaviour
     private void JokeBlock()
     {
         isJokeBlocking = true;
-
+        animator.SetBool("isJBlocking", true);
         StartCoroutine(JokeBlockLasts());
         StartCoroutine(JokeBlockCooldown());
     }
@@ -181,7 +186,7 @@ public class EnemyMovement : MonoBehaviour
     private IEnumerator JokeBlockLasts()
     {
         yield return new WaitForSeconds(2f);
-
+        animator.SetBool("isJBlocking", false);
         isJokeBlocking = false;
     }
 
@@ -190,5 +195,11 @@ public class EnemyMovement : MonoBehaviour
         yield return new WaitForSeconds(5f);
 
         canJokeBlock = true;
+    }
+    private IEnumerator AnimCooldown()
+    {
+        yield return new WaitForSeconds(2f);
+        animator.SetBool("isJoking", false);
+        animator.SetBool("isTickling", false);
     }
 }

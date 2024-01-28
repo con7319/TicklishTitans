@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private float horizontal;
     private float vertical;
     private float moveSpeed;
+    public Animator animator;
 
     private void Start()
     {
@@ -20,12 +21,13 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         PlayerInput();
-    }
-
-    private void FixedUpdate()
-    {
         MovePlayer();
     }
+
+    /*private void FixedUpdate()
+    {
+        MovePlayer();
+    }*/
 
     private void PlayerInput()
     {
@@ -33,10 +35,22 @@ public class PlayerMovement : MonoBehaviour
         vertical = Input.GetAxisRaw("Vertical");
 
         direction = transform.forward * vertical + transform.right * horizontal;
+
+        if (Input.GetAxisRaw("Horizontal")<=0 && Input.GetAxisRaw("Vertical")<=0)
+        {
+            animator.SetBool("isWalking", false);
+        }
+        else
+        {
+            animator.SetBool("isWalking", true);
+        }
     }
 
     private void MovePlayer()
     {
         rb.AddForce(direction.normalized * moveSpeed, ForceMode.Acceleration);
+        
+        
+        
     }
 }

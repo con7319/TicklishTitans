@@ -25,6 +25,7 @@ public class Attack : MonoBehaviour
     private int level = 0;
     public GameObject Bullet;
     public float initialVelocity;
+    public Animator animator;
 
     void Start()
     {
@@ -58,6 +59,7 @@ public class Attack : MonoBehaviour
             {
                 isAttacking = true;
                 Tickle();
+                
             }
         }
 
@@ -70,6 +72,7 @@ public class Attack : MonoBehaviour
         if (isAttacking && !Input.GetMouseButton(0))
         {
             isAttacking = false;
+            animator.SetBool("isJoking", false);
         }
 
         if (GameManager.Instance.isAttacking && Input.GetMouseButtonDown(1))
@@ -198,8 +201,9 @@ public class Attack : MonoBehaviour
         }
         else
         {
+            animator.SetBool("isJoking", true);
             canAttack = false;
-            TickleDamage = 2; // Set TickleDamage here if you want to reset it every time Tickle is called
+            TickleDamage = 5; // Set TickleDamage here if you want to reset it every time Tickle is called
             Debug.Log("Tickle");
             tickleAreaScript.HahaTime(TickleDamage);
 
@@ -222,8 +226,9 @@ public class Attack : MonoBehaviour
         }
         else
         {
+            animator.SetBool("isJoking", true);
             canAttack = false;
-            TickleDamage = 4; // Set TickleDamage here if you want to reset it every time Tickle is called
+            TickleDamage = 10; // Set TickleDamage here if you want to reset it every time Tickle is called
             Debug.Log("Tickle");
             tickleAreaScript.HahaTime(TickleDamage);
 
@@ -248,8 +253,9 @@ public class Attack : MonoBehaviour
         }
         else
         {
+            animator.SetBool("isJoking", true);
             canAttack = false;
-            TickleDamage = 6; // Set TickleDamage here if you want to reset it every time Tickle is called
+            TickleDamage = 15; // Set TickleDamage here if you want to reset it every time Tickle is called
             Debug.Log("Tickle");
             tickleAreaScript.HahaTime(TickleDamage);
 

@@ -10,7 +10,7 @@ public class ETickleArea : MonoBehaviour
     public int currentFill;
     public MeterScript meterFill;
     public bool inCollider = false;
-
+    public Animator animator;
 
     void Start()
     {
@@ -50,5 +50,12 @@ public class ETickleArea : MonoBehaviour
     {
         currentFill += haha;
         meterFill.MeterF(currentFill);
+        animator.SetBool("isBLol", true);
+        StartCoroutine(DamageCooldown());
+    }
+    private IEnumerator DamageCooldown()
+    {
+        yield return new WaitForSeconds(2f);
+        animator.SetBool("isBLol", false);
     }
 }
