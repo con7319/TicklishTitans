@@ -26,7 +26,7 @@ public class PauseScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         bullets = GameObject.FindGameObjectsWithTag("Bullet");
 
@@ -51,7 +51,6 @@ public class PauseScript : MonoBehaviour
         Debug.Log(hero.GetComponent<PlayerMovement>().isActiveAndEnabled);
 
         GameObject.FindWithTag("MainCamera").GetComponent<PlayerCameraMove>().enabled = false;
-
 
         Menu.SetActive(true);
 
