@@ -16,6 +16,7 @@ public class EnemyMovement : MonoBehaviour
     public GameObject jokeProjectile;
     public Transform firePoint;
     public ETickleArea tickleAreaScript;
+    public TickleArea playerTickleAreaScript;
     public Defend defentScript;
     public bool isTickleBlocking = false;
     public bool canTickleBlock = true;
@@ -101,7 +102,7 @@ public class EnemyMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Bullet"))
         {
             int jokeDamage = 15;
-            tickleAreaScript.HahaTime(jokeDamage);
+            playerTickleAreaScript.HahaTime(jokeDamage);
             
         }
     }

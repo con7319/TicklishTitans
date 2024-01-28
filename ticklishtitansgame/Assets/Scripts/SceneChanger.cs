@@ -30,14 +30,14 @@ public class SceneChanger : MonoBehaviour
 
         if (tickleArea != null && tickleArea.currentFill >= tickleArea.Mfull)
         {
-            PlayerPrefs.SetInt("Winner", 0);
+            PlayerPrefs.SetInt("Winner", 1);
             PlayerPrefs.Save();
             GameOver();
         }
 
         if(tickleArea!= null && eTickleArea.currentFill >= eTickleArea.Mfull)
         {
-            PlayerPrefs.SetInt("Winner", 1);
+            PlayerPrefs.SetInt("Winner", 0);
             PlayerPrefs.Save();
             GameOver();
         }
