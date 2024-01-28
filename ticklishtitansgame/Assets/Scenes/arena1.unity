@@ -19785,7 +19785,7 @@ PrefabInstance:
     - target: {fileID: 220686141788172580, guid: 2346ada1380dd584b8eff95aec72d090, type: 3}
       propertyPath: meterFill
       value: 
-      objectReference: {fileID: 1698332404}
+      objectReference: {fileID: 0}
     - target: {fileID: 911649814070432477, guid: 2346ada1380dd584b8eff95aec72d090, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0.05
@@ -19859,17 +19859,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2346ada1380dd584b8eff95aec72d090, type: 3}
---- !u!114 &1698332404 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3027984417429909908, guid: 2346ada1380dd584b8eff95aec72d090, type: 3}
-  m_PrefabInstance: {fileID: 1698332403}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1ccdc8cb249d6043969b8322544258a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1702104975 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8547562741469487195, guid: 1cc366ffed1f2924690139d67a88b254, type: 3}
