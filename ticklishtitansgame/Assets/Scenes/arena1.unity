@@ -11854,7 +11854,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!224 &1022090693
 RectTransform:
@@ -11869,7 +11869,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 180506907}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1480435796}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -17842,6 +17842,7 @@ Transform:
   - {fileID: 1394249220}
   - {fileID: 155058815}
   - {fileID: 218878716}
+  - {fileID: 1022090693}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1480435797
@@ -25054,7 +25055,6 @@ SceneRoots:
   - {fileID: 1046668647}
   - {fileID: 104691747}
   - {fileID: 604607246}
-  - {fileID: 1022090693}
   - {fileID: 1150529997}
   - {fileID: 934282473}
   - {fileID: 8166281264812881721}

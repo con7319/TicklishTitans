@@ -182,8 +182,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Play
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6b9a308e6b0b3564a8db7cd7993e7599, type: 2}
-  m_sharedMaterial: {fileID: 4614541774343055623, guid: 6b9a308e6b0b3564a8db7cd7993e7599, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 90a21d7004220d74584643b7be140ee4, type: 2}
+  m_sharedMaterial: {fileID: 6716756697506993924, guid: 90a21d7004220d74584643b7be140ee4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -316,8 +316,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Quit
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6b9a308e6b0b3564a8db7cd7993e7599, type: 2}
-  m_sharedMaterial: {fileID: 4614541774343055623, guid: 6b9a308e6b0b3564a8db7cd7993e7599, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 90a21d7004220d74584643b7be140ee4, type: 2}
+  m_sharedMaterial: {fileID: 6716756697506993924, guid: 90a21d7004220d74584643b7be140ee4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -650,8 +650,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Tickle Titans
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6b9a308e6b0b3564a8db7cd7993e7599, type: 2}
-  m_sharedMaterial: {fileID: 4614541774343055623, guid: 6b9a308e6b0b3564a8db7cd7993e7599, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -675,7 +675,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 54.05
+  m_fontSize: 58
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1441,6 +1441,8 @@ MonoBehaviour:
   scene: 
   animator: {fileID: 1278407945}
   audioSource: {fileID: 1158296836}
+  tickleArea: {fileID: 0}
+  eTickleArea: {fileID: 0}
 --- !u!4 &1758112782
 Transform:
   m_ObjectHideFlags: 0
