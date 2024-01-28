@@ -11,12 +11,15 @@ public class GameOverMessages : MonoBehaviour
 
     public bool winner = true;
 
-    public string[] WinnerMessages = File.ReadAllLines("Assets/CSV/WinnerMessages.txt");
-    public string[] LoserMessages = File.ReadAllLines("Assets/CSV/loserMessages.txt");
+    public string[] WinnerMessages;
+    public string[] LoserMessages;
 
     // Start is called before the first frame update
     void Start()
     {
+        LoserMessages = File.ReadAllLines("Assets/CSV/loserMessages.txt");
+        WinnerMessages = File.ReadAllLines("Assets/CSV/WinnerMessages.txt");
+
         text = GetComponent<TMP_Text>();
 
         if (winner)

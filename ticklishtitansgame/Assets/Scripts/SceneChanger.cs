@@ -25,12 +25,12 @@ public class SceneChanger : MonoBehaviour
         tickleArea = GameObject.Find("TicklePoint").GetComponent<TickleArea>();
         eTickleArea = GameObject.Find("ETicklePoint").GetComponent<ETickleArea>();
 
-        if (tickleArea != null && tickleArea.currentFill == 100)
+        if (tickleArea != null && tickleArea.currentFill > 100)
         {
             GameOver();
         }
 
-        if(tickleArea!= null && eTickleArea.currentFill == 100)
+        if(tickleArea!= null && eTickleArea.currentFill > 100)
         {
             GameOver();
         }
