@@ -22,9 +22,9 @@ public class Attack : MonoBehaviour
     private bool tickling = false;
     private int TickleDamage;
     private int level = 0;
-
     void Start()
     {
+        
         tickleArea = transform.GetChild(0).gameObject;
         // jokeCanvas.SetActive(false);
         string filePath = @"Assets\csv\jokeslist.csv";
