@@ -9,14 +9,14 @@ public class Ebulletheatseek : MonoBehaviour
     private Rigidbody rb;
     private Transform target;
 
-    public TickleArea tickleArea;
+    public ETickleArea tickleArea;
 
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         // Find the closest enemy at the start
-        tickleArea = GameObject.Find("TicklePoint").GetComponent<TickleArea>();
+        tickleArea = GameObject.Find("ETicklePoint").GetComponent<ETickleArea>();
         FindClosestEnemy();
     }
 

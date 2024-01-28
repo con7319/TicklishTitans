@@ -52,6 +52,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bullet Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 6606861043865054493, guid: a56470f52eebb8e47a4637b56e9ff36c, type: 3}
+      propertyPath: m_TagString
+      value: BulletEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 6926403493319251138, guid: a56470f52eebb8e47a4637b56e9ff36c, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3677363979077113015, guid: a56470f52eebb8e47a4637b56e9ff36c, type: 3}
     m_RemovedGameObjects: []
@@ -80,3 +88,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   rotatingSpeed: 200
+  tickleArea: {fileID: 0}

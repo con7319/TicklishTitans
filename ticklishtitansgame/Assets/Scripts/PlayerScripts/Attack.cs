@@ -146,7 +146,7 @@ public class Attack : MonoBehaviour
                 StartCoroutine(ShowAndHideCanvas(displayTime));
                 }
 
-            var projectileInstance = GameObject.Instantiate(Bullet, this.transform.position, Quaternion.identity);
+            var projectileInstance = GameObject.Instantiate(Bullet, GameObject.Find("TicklePoint").transform.position, Quaternion.identity);
             projectileInstance.GetComponent<Rigidbody>().velocity = initialVelocity * this.transform.forward;
         }
 
