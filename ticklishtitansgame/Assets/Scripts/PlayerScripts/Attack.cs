@@ -15,6 +15,7 @@ public class Attack : MonoBehaviour
     ArrayList jokesListArray = new ArrayList();
     private GameObject tickleArea = default;
     public TickleArea tickleAreaScript;
+    public EnemyMovement enemyMovementScript;
     private bool canAttack = true;
     private bool isAttacking = false;
     private float attackCooldown = 2.5f;
@@ -38,7 +39,7 @@ public class Attack : MonoBehaviour
                 string line;
                 while ((line = sr.ReadLine()) != null)
                 {
-                        jokesListArray.Add(line); // Adding each line to the ArrayList
+                    jokesListArray.Add(line); // Adding each line to the ArrayList
                 }
             }
         }
@@ -121,35 +122,43 @@ public class Attack : MonoBehaviour
     
     private void Joke()
     {
-        Debug.Log("choosing joke");
-        
-        int randomInt = UnityEngine.Random.Range(0, jokesListArray.Count);
-
-        if (randomInt >= 0 && randomInt < jokesListArray.Count)
-            {
-            var line = jokesListArray[randomInt]; 
+        if(enemyMovementScript.isJokeBlocking)
+        {
+            Debug.Log("Block");
+        }
+        else
+        {
+            Debug.Log("choosing joke");
             
-            Debug.Log("joke chosen:");
-            Debug.Log(line);
-            
-            jokeText.text = line.ToString();
-            StartCoroutine(ShowAndHideCanvas(displayTime));
-            }
+            int randomInt = UnityEngine.Random.Range(0, jokesListArray.Count);
 
-        var projectileInstance = GameObject.Instantiate(Bullet, this.transform.position, Quaternion.identity);
-        projectileInstance.GetComponent<Rigidbody>().velocity = initialVelocity * this.transform.forward;
+            if (randomInt >= 0 && randomInt < jokesListArray.Count)
+                {
+                var line = jokesListArray[randomInt]; 
+                
+                Debug.Log("joke chosen:");
+                Debug.Log(line);
+                
+                jokeText.text = line.ToString();
+                StartCoroutine(ShowAndHideCanvas(displayTime));
+                }
+
+            var projectileInstance = GameObject.Instantiate(Bullet, this.transform.position, Quaternion.identity);
+            projectileInstance.GetComponent<Rigidbody>().velocity = initialVelocity * this.transform.forward;
+        }
+
         
     }
     private IEnumerator ShowAndHideCanvas(float time)
     {
         //Show the canvas
         jokeCanvas.SetActive(true);
-        isAttacking = false;
+        GameManager.Instance.isAttacking = false;
         // Wait for the specified time
         yield return new WaitForSeconds(time);
 
         // Hide the canvas
-        isAttacking = true;
+        GameManager.Instance.isAttacking = true;
         jokeCanvas.SetActive(false);
     }
 
@@ -183,53 +192,76 @@ public class Attack : MonoBehaviour
 
     private void Level1()
     {
-        canAttack = false;
-        TickleDamage = 2; // Set TickleDamage here if you want to reset it every time Tickle is called
-        Debug.Log("Tickle");
-        tickleAreaScript.HahaTime(TickleDamage);
+        if(enemyMovementScript.isTickleBlocking)
+        {
+            Debug.Log("Block");
+        }
+        else
+        {
+            canAttack = false;
+            TickleDamage = 2; // Set TickleDamage here if you want to reset it every time Tickle is called
+            Debug.Log("Tickle");
+            tickleAreaScript.HahaTime(TickleDamage);
 
-        // Add animation code
-        // Make this do something
+            // Add animation code
+            // Make this do something
 
-        tickleArea.SetActive(true);
+            tickleArea.SetActive(true);
 
-        tickling = true;
+            tickling = true;
 
-        StartCoroutine(AttackCooldown());
+            StartCoroutine(AttackCooldown());
+        }
     }
 
     private void Level2()
     {
-        canAttack = false;
-        TickleDamage = 4; // Set TickleDamage here if you want to reset it every time Tickle is called
-        Debug.Log("Tickle");
-        tickleAreaScript.HahaTime(TickleDamage);
+        if(enemyMovementScript.isTickleBlocking)
+        {
+            Debug.Log("Block");
+        }
+        else
+        {
+            canAttack = false;
+            TickleDamage = 4; // Set TickleDamage here if you want to reset it every time Tickle is called
+            Debug.Log("Tickle");
+            tickleAreaScript.HahaTime(TickleDamage);
 
-        // Add animation code
-        // Make this do something
+            // Add animation code
+            // Make this do something
 
-        tickleArea.SetActive(true);
+            tickleArea.SetActive(true);
 
-        tickling = true;
+            tickling = true;
+
+            StartCoroutine(AttackCooldown());
+        }
 
         StartCoroutine(AttackCooldown());
     }
 
     private void Level3()
     {
-        canAttack = false;
-        TickleDamage = 6; // Set TickleDamage here if you want to reset it every time Tickle is called
-        Debug.Log("Tickle");
-        tickleAreaScript.HahaTime(TickleDamage);
+        if(enemyMovementScript.isTickleBlocking)
+        {
+            Debug.Log("Block");
+        }
+        else
+        {
+            canAttack = false;
+            TickleDamage = 6; // Set TickleDamage here if you want to reset it every time Tickle is called
+            Debug.Log("Tickle");
+            tickleAreaScript.HahaTime(TickleDamage);
 
-        // Add animation code
-        // Make this do something
+            // Add animation code
+            // Make this do something
 
-        tickleArea.SetActive(true);
+            tickleArea.SetActive(true);
 
-        tickling = true;
+            tickling = true;
 
-        StartCoroutine(AttackCooldown());
+            StartCoroutine(AttackCooldown());
+        }
     }
 
     public void FillBar(float fillValue)

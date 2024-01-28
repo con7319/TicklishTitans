@@ -13,13 +13,12 @@ public class PlayerCameraMove : MonoBehaviour
 
     private void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         offset = player.position - cameraPos.position;
     }
 
     private void Update()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-
         RotateCamera();
     }
 
