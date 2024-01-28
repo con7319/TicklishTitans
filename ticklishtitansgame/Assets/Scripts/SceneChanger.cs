@@ -25,6 +25,8 @@ public class SceneChanger : MonoBehaviour
 
     private void Update()
     {
+
+        
         tickleArea = GameObject.Find("TicklePoint").GetComponent<TickleArea>();
         eTickleArea = GameObject.Find("ETicklePoint").GetComponent<ETickleArea>();
 
