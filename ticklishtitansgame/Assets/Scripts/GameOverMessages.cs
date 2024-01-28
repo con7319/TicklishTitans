@@ -11,8 +11,8 @@ public class GameOverMessages : MonoBehaviour
 
     public bool winner = true;
 
-    public string[] WinnerMessages = File.ReadAllLines("Assets/CSV/WinnerMessages");
-    public string[] LoserMessages = File.ReadAllLines("Assets/CSV/LoserMessages");
+    public string[] WinnerMessages = File.ReadAllLines("Assets/CSV/WinnerMessages.txt");
+    public string[] LoserMessages = File.ReadAllLines("Assets/CSV/loserMessages.txt");
 
     // Start is called before the first frame update
     void Start()
@@ -21,11 +21,18 @@ public class GameOverMessages : MonoBehaviour
 
         if (winner)
         {
-            text.text = WinnerMessages[Random.Range(0, WinnerMessages.Length-1)];
+            if (WinnerMessages.Length > 0)
+            {
+                text.text = WinnerMessages[Random.Range(0, WinnerMessages.Length - 1)];
+            }
+            else
+            {
+                Debug.LogError("Winner Messages empty");
+            }
         }
         else
         {
-            text.text = LoserMessages[Random.Range(0, LoserMessages.Length - 1)];
+            text.text = LoserMessages[Random.Range(0, LoserMessages.Length- 1)];
         }
     }
 }
