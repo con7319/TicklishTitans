@@ -13,11 +13,14 @@ public class SceneChanger : MonoBehaviour
     public TickleArea tickleArea;
     public ETickleArea eTickleArea;
 
+
+
     // Start is called before the first frame update
     void Awake()
     {
         smiley = GameObject.Find("Smiley");
-        
+        PlayerPrefs.SetInt("winner", 1);
+        PlayerPrefs.Save();
     }
 
     private void Update()
@@ -25,13 +28,17 @@ public class SceneChanger : MonoBehaviour
         tickleArea = GameObject.Find("TicklePoint").GetComponent<TickleArea>();
         eTickleArea = GameObject.Find("ETicklePoint").GetComponent<ETickleArea>();
 
-        if (tickleArea != null && tickleArea.currentFill > 100)
+        if (tickleArea != null && tickleArea.currentFill >= tickleArea.Mfull)
         {
+            PlayerPrefs.SetInt("Winner", 0);
+            PlayerPrefs.Save();
             GameOver();
         }
 
-        if(tickleArea!= null && eTickleArea.currentFill > 100)
+        if(tickleArea!= null && eTickleArea.currentFill >= eTickleArea.Mfull)
         {
+            PlayerPrefs.SetInt("Winner", 1);
+            PlayerPrefs.Save();
             GameOver();
         }
     }

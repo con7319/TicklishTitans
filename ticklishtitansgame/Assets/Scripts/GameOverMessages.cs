@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameOverMessages : MonoBehaviour
@@ -19,6 +20,8 @@ public class GameOverMessages : MonoBehaviour
     {
         LoserMessages = File.ReadAllLines("Assets/CSV/loserMessages.txt");
         WinnerMessages = File.ReadAllLines("Assets/CSV/WinnerMessages.txt");
+
+        bool winner = PlayerPrefs.GetInt("Winner") == 1;
 
         text = GetComponent<TMP_Text>();
 
