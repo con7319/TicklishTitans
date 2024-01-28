@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.Mail;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -24,12 +25,12 @@ public class SceneChanger : MonoBehaviour
         tickleArea = GameObject.Find("TicklePoint").GetComponent<TickleArea>();
         eTickleArea = GameObject.Find("ETicklePoint").GetComponent<ETickleArea>();
 
-        if (tickleArea.currentFill == 100)
+        if (tickleArea != null && tickleArea.currentFill == 100)
         {
             GameOver();
         }
 
-        if(eTickleArea.currentFill == 100)
+        if(tickleArea!= null && eTickleArea.currentFill == 100)
         {
             GameOver();
         }
@@ -47,6 +48,17 @@ public class SceneChanger : MonoBehaviour
         Debug.Log("Scene set to arena");
 
         Invoke("SceneLoader", 2f );
+    }
+
+    public void Menu()
+    {
+        animator.SetBool("transition", true);
+
+        audioSource.Play();
+
+        scene = "Menu";
+
+        Invoke("SceneLoader", 2f);
     }
 
     public void SceneLoader()
