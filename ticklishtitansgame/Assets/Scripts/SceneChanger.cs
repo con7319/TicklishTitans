@@ -23,21 +23,10 @@ public class SceneChanger : MonoBehaviour
         PlayerPrefs.Save();
     }
 
-    private void Start()
-    {
-        // Cache references to the components in Start or Awake
-        GameObject ticklePoint = GameObject.Find("TicklePoint");
-        GameObject eTicklePoint = GameObject.Find("ETicklePoint");
-
-        if (ticklePoint != null && eTicklePoint != null)
-        {
-            tickleArea = ticklePoint.GetComponent<TickleArea>();
-            eTickleArea = eTicklePoint.GetComponent<ETickleArea>();
-        }
-    }
-
     private void Update()
-    {        
+    {
+        tickleArea = GameObject.Find("TicklePoint").GetComponent<TickleArea>();
+        eTickleArea = GameObject.Find("ETicklePoint").GetComponent<ETickleArea>();
 
         if (tickleArea != null && tickleArea.currentFill >= tickleArea.Mfull)
         {
