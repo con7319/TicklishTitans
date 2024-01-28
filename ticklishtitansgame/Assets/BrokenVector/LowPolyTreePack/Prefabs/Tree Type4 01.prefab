@@ -150,8 +150,9 @@ MonoBehaviour:
   triggerOptions:
     triggerType: 0
     minimumCollisionForce: 0
-    filterCollisionsByTag: 0
-    triggerAllowedTags: []
+    filterCollisionsByTag: 1
+    triggerAllowedTags:
+    - Player
     triggerKey: 0
   fractureOptions:
     fragmentCount: 5
