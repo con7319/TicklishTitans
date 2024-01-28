@@ -18,8 +18,8 @@ public class GameOverMessages : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        LoserMessages = File.ReadAllLines("Assets/CSV/loserMessages.txt");
-        WinnerMessages = File.ReadAllLines("Assets/CSV/WinnerMessages.txt");
+        LoserMessages = File.ReadAllLines(Path.Combine(Application.streamingAssetsPath, "loserMessages.txt"));
+        WinnerMessages = File.ReadAllLines(Path.Combine(Application.streamingAssetsPath,"WinnerMessages.txt"));
 
         bool winner = PlayerPrefs.GetInt("Winner") == 1;
 

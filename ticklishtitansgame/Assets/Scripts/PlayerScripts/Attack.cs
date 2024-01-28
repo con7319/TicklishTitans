@@ -31,7 +31,7 @@ public class Attack : MonoBehaviour
     {
         tickleArea = transform.GetChild(0).gameObject;
         jokeCanvas.SetActive(false);
-        string filePath = @"Assets\csv\jokeslist.csv";
+        string filePath = Path.Combine(Application.streamingAssetsPath, "jokeslist.csv");
         
         try
         {
